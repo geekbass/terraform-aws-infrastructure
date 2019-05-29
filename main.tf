@@ -158,6 +158,7 @@ module "dcos-bootstrap-instance" {
   name_prefix                     = "${var.name_prefix}"
   tags                            = "${var.tags}"
   hostname_format                 = "${var.bootstrap_hostname_format}"
+  user_data                       = "${var.bootstrap_user_data}"
 }
 
 module "dcos-master-instances" {
@@ -181,6 +182,7 @@ module "dcos-master-instances" {
   aws_associate_public_ip_address = "${var.masters_associate_public_ip_address}"
   tags                            = "${var.tags}"
   hostname_format                 = "${var.masters_hostname_format}"
+  user_data                       = "${var.user_data}"
 }
 
 module "dcos-privateagent-instances" {
@@ -207,6 +209,7 @@ module "dcos-privateagent-instances" {
   name_prefix                     = "${var.name_prefix}"
   tags                            = "${var.tags}"
   hostname_format                 = "${var.private_agents_hostname_format}"
+  user_data                       = "${var.user_data}"
 }
 
 // DC/OS tested OSes provides sample AMIs and user-data
@@ -234,6 +237,7 @@ module "dcos-publicagent-instances" {
   name_prefix                     = "${var.name_prefix}"
   tags                            = "${var.tags}"
   hostname_format                 = "${var.public_agents_hostname_format}"
+  user_data                       = "${var.user_data}"
 }
 
 // Load balancers is providing two load balancers. One for accessing the DC/OS masters and a secondone balancing over public agents.

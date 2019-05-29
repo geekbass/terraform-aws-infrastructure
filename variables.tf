@@ -280,3 +280,13 @@ variable "public_agents_acm_cert_arn" {
   description = "ACM certifacte to be used for the public agents load balancer"
   default     = ""
 }
+
+variable "bootstrap_user_data" {
+  description = "User data to be used on these instances (cloud-init)"
+  default     = ""
+}
+
+variable "user_data" {
+  description = "User data to be used on these instances (cloud-init)"
+  default     = ""
+}
