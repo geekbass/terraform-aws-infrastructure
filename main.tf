@@ -136,6 +136,7 @@ module "dcos-bootstrap-instance" {
   aws_instance_type               = "${var.bootstrap_instance_type}"
   aws_associate_public_ip_address = "${var.bootstrap_associate_public_ip_address}"
   hostname_format                 = "${var.bootstrap_hostname_format}"
+  user_data                       = "${var.bootstrap_user_data}"
 
   tags = "${var.tags}"
 }
@@ -163,6 +164,7 @@ module "dcos-master-instances" {
   aws_instance_type               = "${var.masters_instance_type}"
   aws_associate_public_ip_address = "${var.masters_associate_public_ip_address}"
   hostname_format                 = "${var.masters_hostname_format}"
+  user_data                       = "${var.user_data}"
 
   tags = "${var.tags}"
 }
@@ -192,6 +194,7 @@ module "dcos-privateagent-instances" {
   aws_instance_type               = "${var.private_agents_instance_type}"
   aws_associate_public_ip_address = "${var.private_agents_associate_public_ip_address}"
   hostname_format                 = "${var.private_agents_hostname_format}"
+  user_data                       = "${var.user_data}"
 
   tags = "${var.tags}"
 }
@@ -222,6 +225,7 @@ module "dcos-publicagent-instances" {
   aws_instance_type               = "${var.public_agents_instance_type}"
   aws_associate_public_ip_address = "${var.public_agents_associate_public_ip_address}"
   hostname_format                 = "${var.public_agents_hostname_format}"
+  user_data                       = "${var.user_data}"
 
   tags = "${var.tags}"
 }
