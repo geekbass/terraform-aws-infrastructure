@@ -244,3 +244,13 @@ variable "aws_s3_bucket" {
   description = "S3 Bucket for External Exhibitor"
   default     = ""
 }
+
+variable "bootstrap_user_data" {
+  description = "User data to be used on these instances (cloud-init)"
+  default     = ""
+}
+
+variable "user_data" {
+  description = "User data to be used on these instances (cloud-init)"
+  default     = ""
+}
